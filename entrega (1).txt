@@ -1,0 +1,29 @@
+📦 Proyecto Docker Multicontenedor — Flask + Node.js
+
+👤 Autor:
+- Usuario de Docker Hub: rubiano718
+
+🔗 Enlaces de las imágenes publicadas en Docker Hub:
+1. FlaskApp Web → https://hub.docker.com/r/rubiano718/flaskapp-web
+2. FlaskApp NodeApp → https://hub.docker.com/r/rubiano718/flaskapp-nodeapp
+
+🧩 Descripción:
+Esta aplicación multicontenedor utiliza dos servicios:
+- **flaskapp-web:** aplicación backend basada en Python (Flask) que corre en el puerto 5000.
+- **flaskapp-nodeapp:** aplicación frontend o servicio adicional en Node.js que corre en el puerto 3000.
+
+Ambos servicios están definidos en el archivo `docker-compose.yml`, comparten una red interna `appnet` y montan volúmenes para persistencia de datos y código fuente.
+
+⚙️ Para ejecutar el proyecto:
+1. Entrar al directorio del proyecto:
+   cd ~/flaskapp
+
+2. Levantar los contenedores:
+   sudo docker compose up -d
+
+3. Verificar que están corriendo:
+   sudo docker ps
+
+4. Acceder desde el navegador:
+   - Flask → http://localhost:5000  
+   - NodeApp → http://localhost:3000
